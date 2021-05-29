@@ -1,13 +1,13 @@
-# ToDo Web App using the PERN stack
-
+**# ToDo Web App using the PERN stack
+**
 Technologies used: PostGres SQL, Express, React, NodeJS, Heroku
 
-Description:
-
+**Description:
+**
 A simple to-do list that is connected to a Postgres Database deployed on Heroku.
 
-Features:
-- The list of todos are persistent. Refreshing browser or closing the app will keep todos in place.
+**Features:
+**- The list of todos are persistent. Refreshing browser or closing the app will keep todos in place.
 - The checkmark crosses out the item, noting that they are completed. Checking again will return todos back to incomplete status.
 - Allows for filtering of the items that are completed or incomplete
 
