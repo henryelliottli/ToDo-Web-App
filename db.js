@@ -47,4 +47,4 @@ if (process.env.NODE_ENV === "production"){
     client = devConfig;
 }
 
-export default client;
+module.exports = client;
