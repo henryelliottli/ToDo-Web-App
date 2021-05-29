@@ -11,23 +11,31 @@ body {
 }
 header {
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header,
 form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+h2 {
+  display: flex;
+  text-align: center;
+  margin: 1rem;
+}
+
 form input{
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
-  flex-grow: 1;
-  flex-shrink: 1;
   margin-left: 0.5rem;
+  flex: 70%;
 }
 
 form button {
@@ -70,6 +78,7 @@ form button:hover {
 }
 .filter-todo {
   padding: 1rem;
+  flex:20%;
 }
 .todo li {
   flex: 1;

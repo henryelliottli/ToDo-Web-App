@@ -50,6 +50,7 @@ function App() {
   return (
     <div className="App">
       <header>Henry's ToDo List</header>
+      <h2>If you are on mobile please rotate for the best viewing experience</h2>
       {/* <button onClick = {getAllTodos}>HERE</button> */}
       <Form 
         inputText = {inputText} 

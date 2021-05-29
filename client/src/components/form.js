@@ -34,7 +34,7 @@ const Form = ({inputText,setInputText, setToDos, toDos, setStatus}) => {
     const inputValue = React.useRef();
 
     return  (
-    <form onSubmit = {onSubmitHandler} >
+    <form className ="input-form" onSubmit = {onSubmitHandler} >
     <input ref={inputValue} value = {inputText} type="text" className="todo-input" onChange = {inputTextHandler} />
     <button className="todo-button" type="submit">
       <i className="fas fa-plus-square"></i>
