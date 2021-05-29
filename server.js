@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 //process.env.PORT
 //process.env.NODE_ENV => production or undefined
 // app.use(express.static(path.join(__dirname, "client/build"))); //hit all the static files
-pool.connect();
+// pool.connect();
 
 //middleware
 app.use(cors());

@@ -15,6 +15,4 @@ const pool = new Pool({
     process.env.NODE_ENV === "production" ? client : devConfig,
 });
 
-
-
 module.exports = pool;
