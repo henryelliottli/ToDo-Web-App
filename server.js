@@ -1,19 +1,10 @@
 const express = require("express");
 const app = express(); //run express
 const cors = require('cors');
-// const pool = require('./db');
+const client = require('./db');
 const { response, request } = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-
-const { Client } = require('pg');
-
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
 
 client.connect();
 
