@@ -4,7 +4,7 @@ const Todo = ({todo, toDos, setToDos}) => {
     const deleteHandler= async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/todos/${todo.todo_id}`,{
+            const response = await fetch(`/todos/${todo.todo_id}`,{
             method: "DELETE",
             })
             const data = await response.text()
@@ -17,7 +17,7 @@ const Todo = ({todo, toDos, setToDos}) => {
     const completedHandler =  async () =>  {
         try {
             const body = {completed : !todo.completed};
-            const response = await fetch(`http://localhost:5000/todos/completed/${todo.todo_id}`,{
+            const response = await fetch(`/todos/completed/${todo.todo_id}`,{
                 method: "PUT",
                 headers : {"Content-Type": "application/json"},
                 body : JSON.stringify(body)
