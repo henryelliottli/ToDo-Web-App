@@ -12,7 +12,9 @@ const prodConfig = {
 
 const pool = new Pool({
   connectionString:
-    process.env.NODE_ENV === "production" ? client : devConfig,
+    process.env.NODE_ENV === "production" ? prodConfig : devConfig,
 });
+
+pool.connect();
 
 module.exports = pool;
