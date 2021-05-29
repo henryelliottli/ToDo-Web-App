@@ -29,7 +29,7 @@ function App() {
 
   //get Todos from database
   const getAllTodos = async ()=>{
-    const response = await fetch("http://localhost:5000/todos",{
+    const response = await fetch("/todos",{
       method : "GET"
     })
     const data = await response.json();
