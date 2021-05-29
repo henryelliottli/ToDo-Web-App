@@ -47,15 +47,6 @@ function App() {
 
 
 
-  // function saveToDos() {
-  //   if (localStorage.getItem("ToDoList") === null){
-  //     window.localStorage.setItem("ToDoList",JSON.stringify([]));  
-  //   }
-  //   else{
-  //     window.localStorage.setItem("ToDoList",JSON.stringify(toDos));
-  //   }
-  // }
-
   return (
     <div className="App">
       <header>Henry's ToDo List</header>
