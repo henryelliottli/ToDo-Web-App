@@ -1,15 +1,28 @@
 const express = require("express");
 const app = express(); //run express
 const cors = require('cors');
-const pool = require('./db');
+// const pool = require('./db');
 const { response, request } = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
+
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
+client.connect();
 
 //process.env.PORT
 //process.env.NODE_ENV => production or undefined
 // app.use(express.static(path.join(__dirname, "client/build"))); //hit all the static files
 // pool.connect();
+
+
 
 //middleware
 app.use(cors());
@@ -18,14 +31,15 @@ app.use(express.json()); // => allows us to access the req.body
 // app.use(express.static(path.join(__dirname, "client/build")));
 // app.use(express.static("./client/build")); => for demonstration
 
+
+
 if (process.env.NODE_ENV === "production") {
   //server static content
   //npm run build
   app.use(express.static(path.join(__dirname, "client/build")));
 }
 
-console.log(__dirname);
-console.log(path.join(__dirname, "client/build"));
+console.log(PORT);
 
 //ROUTES//
 
